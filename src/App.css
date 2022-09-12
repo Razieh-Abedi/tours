@@ -51,8 +51,8 @@ code {
   }
 }
 /* custom css */
-.main-card {
-  height: 40rem;
+.tour-card {
+  height: 35rem !important;
 }
 .title-line {
   margin-top: 2rem;
@@ -60,4 +60,4 @@ code {
 
   border: 1;
   border-top: 2px solid rgba(7, 7, 7, 0.1);
-  }
+}
