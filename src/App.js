@@ -5,19 +5,20 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [tours, setTours] = useState([]);
   useEffect(() => {
     fetch("https://course-api.com/react-tours-project")
       .then((res) => res.json())
       .then((data) => {
-        setIsLoading(false)
-        setTours(data)
+        setIsLoading(false);
+        setTours(data);
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }, []);
+
   // const fetchTours = async () => {
   //   setIsLoading(true);
   //   try {
@@ -49,7 +50,7 @@ function App() {
       <main className="container my-5">
         <div className="text-center">
           <h2 className="m-3">No tours left</h2>
-          <button className="btn btn-primary" onClick={() => setTours()}>
+          <button className="btn btn-primary" onClick={() => <Tours/>}>
             Refresh
           </button>
         </div>
@@ -57,7 +58,7 @@ function App() {
     );
   }
   return (
-    <div className="my-5">
+    <div className="my-2">
       <Tours tours={tours} removeTour={removeTour} />
     </div>
   );

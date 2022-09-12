@@ -1,10 +1,11 @@
 import React from "react";
 import Tour from "./Tour";
+import Footer from "./Footer";
 
 function Tours({ tours, removeTour }) {
   return (
-    <section className="containter">
-      <div className="row text-center">
+    <section className="">
+      <div className="text-center">
         <h1>Our Tours</h1>
         <div className="title-line"></div>
       </div>
@@ -14,6 +15,9 @@ function Tours({ tours, removeTour }) {
             <Tour key={tour.id} {...tour} removeTour={removeTour}></Tour>
           ))}
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </section>
   );
