@@ -7,7 +7,7 @@ function Tours({ tours, removeTour }) {
     <section className="">
       <div className="text-center">
         <h1>Our Tours</h1>
-        <div className="title-line"></div>
+        <div className="title-line w-75 mx-auto"></div>
       </div>
       <div className="container">
         <div className="row row-cols-1 row-cols-md-2 gx-5 gy-3">

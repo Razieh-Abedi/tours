@@ -52,12 +52,11 @@ code {
 }
 /* custom css */
 .tour-card {
-  height: 35rem !important;
+  height: 40rem !important;
 }
 .title-line {
   margin-top: 2rem;
   margin-bottom: 2rem;
-
   border: 1;
   border-top: 2px solid rgba(7, 7, 7, 0.1);
 }

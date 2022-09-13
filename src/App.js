@@ -7,7 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [tours, setTours] = useState([]);
-  useEffect(() => {
+
+  const fetchTours = () => {
     fetch("https://course-api.com/react-tours-project")
       .then((res) => res.json())
       .then((data) => {
@@ -17,8 +18,11 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  };
 
+  useEffect(() => {
+    fetchTours();
+  }, []);
   // const fetchTours = async () => {
   //   setIsLoading(true);
   //   try {
@@ -50,7 +54,7 @@ function App() {
       <main className="container my-5">
         <div className="text-center">
           <h2 className="m-3">No tours left</h2>
-          <button className="btn btn-primary" onClick={() => <Tours/>}>
+          <button className="btn btn-primary" onClick={fetchTours}>
             Refresh
           </button>
         </div>

@@ -6,7 +6,7 @@ function Tour({ id, image, info, price, name, removeTour }) {
     <div className="col">
       <div className="card tour-card">
         <img className="card-img-top w-100 h-50" src={image} alt={name} />
-        <div className="card-body h-50 w-100 d-flex flex-column justify-content-evenly">
+        <div className="card-body h-50  d-flex flex-column justify-content-evenly">
           <div className="card-title d-flex justify-content-between">
             <h4>{name}</h4>
             <h4 className="tour-price">${price}</h4>
@@ -21,7 +21,7 @@ function Tour({ id, image, info, price, name, removeTour }) {
             </button>
           </p>
           <button
-            className="btn btn-primary mx-auto d-block w-25"
+            className="btn btn-primary w-50 mx-auto"
             onClick={() => removeTour(id)}
           >
             Not Interested
